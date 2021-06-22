@@ -1,20 +1,24 @@
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
 import illustrationImg from "../assets/images/illustration.svg";
 import logoImg from "../assets/images/logo.svg";
 import googleIconImg from '../assets/images/google-icon.svg';
 import '../styles/auth.scss';
 import { Button } from "../components/Button";
 import { firebase, auth } from '../services/firebase';
+import { TestContext } from '../App';
 
 export function Home() {
+  //quando inicia com use é um hook do react... 
   const history = useHistory();
+  const value = useContext(TestContext);
 
   function handleCreateRoom(){
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider).then(result => {
         console.log(result);
-    })
-      history.push('/rooms/new');
+        history.push('/rooms/new');
+    });
   }
 
   return (
@@ -25,6 +29,7 @@ export function Home() {
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
       <main>
+        <h1>{value}</h1>
           <div className="main-content">
               <img src={logoImg} alt="Letmeask"/>
               <button 
