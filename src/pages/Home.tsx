@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
+import { useAuth } from "../hooks/userAuth";
 import illustrationImg from "../assets/images/illustration.svg";
 import logoImg from "../assets/images/logo.svg";
 import googleIconImg from '../assets/images/google-icon.svg';
 import '../styles/auth.scss';
 import { Button } from "../components/Button";
-import { useAuth } from "../hooks/userAuth";
 
 export function Home() {
   //quando inicia com use é um hook do react... 
