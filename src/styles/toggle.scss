@@ -1,0 +1,43 @@
+.toggle-theme {
+  background: #fff;
+  border: rgb(14, 13, 13);
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.5rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  width: 8rem;
+  height: 3.5rem;
+
+  img {
+    height: auto;
+    width: 2.5rem;
+    transition: all 0.3s linear;
+  }
+
+  &.light {
+    img {
+      &:nth-child(2) {
+        transform: translateX(70px);
+      }
+      &:first-child {
+        transform: translateX(70px);
+      }
+    }
+  }
+
+  &.dark {
+    img {
+        &:nth-child(2) {
+        transform: translateX(-70px);
+      }
+      &:first-child {
+        transform: translateX(-70px);
+      }
+    }
+  }
+}

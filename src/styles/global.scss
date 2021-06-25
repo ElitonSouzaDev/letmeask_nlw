@@ -7,7 +7,15 @@
 body {
     background-color: #f8f8f8;
     color: #29292e;
+    transition: all 0.25s linear;
+
+     .dark {
+        background-color: #29292e; 
+        color: #fff;
+        transition: all 0.25s linear;
+    }
 }
+
 
 body, input, button, textarea {
     font: 400 16px 'Roboto', sans-serif;

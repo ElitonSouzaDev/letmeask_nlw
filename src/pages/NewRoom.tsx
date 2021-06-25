@@ -5,12 +5,15 @@ import { Button } from "../components/Button";
 import { Link, useHistory } from "react-router-dom";
 import { FormEvent, useState } from 'react';
 import { database } from "../services/firebase";
-import { useAuth } from "../hooks/userAuth";
+import { useAuth } from "../hooks/useAuth";
+import { useTheme } from "../hooks/useTheme";
+import Toggle from "../components/Toggle";
 
 export function NewRoom() {
   const { user } = useAuth();
   const history = useHistory();
   const [newRoom, setNewRoom ] = useState('');
+  const { currentTheme, toggleTheme } = useTheme();
 
   async function handleCreateRoom(event:FormEvent) {
     event.preventDefault();
@@ -30,11 +33,12 @@ export function NewRoom() {
   }
   
   return (
-    <div id="page-auth">
+    <div id="page-auth" className={currentTheme}>
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <Toggle currentTheme={currentTheme} toggleTheme={toggleTheme} />
       </aside>
       <main>
           <div className="main-content">
