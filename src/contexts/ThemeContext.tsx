@@ -24,6 +24,7 @@ export function ThemeContextProvider(props: ThemeContextPoviderProps) {
 
   useEffect(() => {
       localStorage.setItem('theme', currentTheme);
+      document.body.className = currentTheme;
   }, [currentTheme]);
 
   return (

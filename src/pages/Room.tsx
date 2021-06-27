@@ -1,15 +1,16 @@
-import LogoImg from "../assets/images/logo.svg";
 import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
 import { useHistory, useParams } from "react-router-dom";
 import "../styles/room.scss";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, Fragment, useEffect, useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import toast from "react-hot-toast";
 import { database } from "../services/firebase";
 import { useTheme } from "../hooks/useTheme";
 import { Question } from "../components/Question";
 import { useRoom } from "../hooks/useRoom";
+import { Logo } from "../components/Logo";
+import Toggle from "../components/Toggle";
 
 type RoomParams = {
   id: string;
@@ -21,7 +22,7 @@ export function Room() {
   const RoomID = params.id;
   const [newQuestion, setNewQuestion] = useState("");
   const { questions, title } = useRoom(RoomID);
-  const { currentTheme } = useTheme();
+  const { currentTheme, toggleTheme } = useTheme();
   const history = useHistory();
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export function Room() {
         history.push("/");
       }
     });
-  }, [RoomID]);
+  }, [RoomID, history]);
 
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -83,7 +84,10 @@ export function Room() {
     <div id="pageRoom" className={currentTheme}>
       <header>
         <div className="content">
-          <img src={LogoImg} alt="LetMeAsk" />
+          <div className='teste'>
+            <Logo />
+            <Toggle currentTheme={currentTheme} toggleTheme={toggleTheme} />
+          </div>
           <RoomCode code={RoomID} />
         </div>
       </header>

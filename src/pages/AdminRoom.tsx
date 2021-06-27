@@ -1,4 +1,3 @@
-import LogoImg from "../assets/images/logo.svg";
 import deleteImg from "../assets/images/delete.svg";
 import checkImg from "../assets/images/check.svg";
 import answerImg from "../assets/images/answer.svg";
@@ -11,6 +10,7 @@ import { Question } from "../components/Question";
 import { useRoom } from "../hooks/useRoom";
 import { Button } from "../components/Button";
 import { database } from "../services/firebase";
+import { Logo } from "../components/Logo";
 
 type RoomParams = {
   id: string;
@@ -52,7 +52,7 @@ export function AdminRoom() {
     <div id="pageRoom" className={currentTheme}>
       <header>
         <div className="content">
-          <img src={LogoImg} alt="LetMeAsk" />
+          <Logo/>
           <div>
             <RoomCode code={RoomID} />
             <Button isOutlined type="button" onClick={handleEndRoom}>

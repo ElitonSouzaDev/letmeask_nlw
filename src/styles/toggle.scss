@@ -10,22 +10,22 @@
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
-  width: 8rem;
-  height: 3.5rem;
+  width: 6rem;
+  height: 2.5rem!important;
 
   img {
     height: auto;
-    width: 2.5rem;
+    width: 1.7rem;
     transition: all 0.3s linear;
   }
 
   &.light {
     img {
       &:nth-child(2) {
-        transform: translateX(70px);
+        transform: translateX(55px);
       }
       &:first-child {
-        transform: translateX(70px);
+        transform: translateX(55px);
       }
     }
   }
@@ -33,10 +33,10 @@
   &.dark {
     img {
         &:nth-child(2) {
-        transform: translateX(-70px);
+        transform: translateX(-55px);
       }
       &:first-child {
-        transform: translateX(-70px);
+        transform: translateX(-55px);
       }
     }
   }

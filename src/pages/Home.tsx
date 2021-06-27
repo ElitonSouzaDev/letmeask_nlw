@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 import "../styles/auth.scss";
 import { Button } from "../components/Button";
@@ -10,6 +9,7 @@ import { database } from "../services/firebase";
 import { useTheme } from "../hooks/useTheme";
 import Toggle from "../components/Toggle";
 import toast from "react-hot-toast";
+import { Logo } from "../components/Logo";
 
 export function Home() {
   //quando inicia com use é um hook do react...
@@ -55,11 +55,13 @@ export function Home() {
         />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
-        <Toggle currentTheme={currentTheme} toggleTheme={toggleTheme} />
       </aside>
       <main>
         <div className="main-content">
-          <img src={logoImg} alt="Letmeask" />
+          <div style={{display:'flex'}}>
+            <Logo />
+            <Toggle currentTheme={currentTheme} toggleTheme={toggleTheme} />
+          </div>
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
             Crie sua sala com o Google
