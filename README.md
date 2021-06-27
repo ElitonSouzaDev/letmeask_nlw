@@ -29,7 +29,7 @@ Projeto desenvolvido durante a Next Level Week #6 da [Rocketseat](https://rocket
 - [Layout Web](https://www.figma.com/file/ITmt54Pz9ssMKU3pRMPHLS/Letmeask-(Copy)?node-id=0%3A1)
 
 ### Acesse a demo:
-(em breve)
+- [LETMEASK - DEMON](https://letmeask-nlw-cc625.web.app/)
 
 ## Tecnologias utilizadas
 
