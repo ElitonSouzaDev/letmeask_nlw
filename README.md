@@ -3,15 +3,15 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/lorenatoscano/letmeask?color=835AFD">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ElitonSouzaDev/letmeask_nlw?color=835AFD">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lorenatoscano/letmeask?color=835AFD">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ElitonSouzaDev/letmeask_nlw?color=835AFD">
   
   <a href="https://github.com/lorenatoscano/letmeask/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lorenatoscano/letmeask?color=835AFD">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ElitonSouzaDev/letmeask_nlw?color=835AFD">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/lorenatoscano/letmeask?color=835AFD">
+  <img alt="GitHub" src="https://img.shields.io/github/license/ElitonSouzaDev/letmeask_nlw?color=835AFD">
 </p>
 
 <p align="center">
