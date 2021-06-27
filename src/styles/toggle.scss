@@ -1,6 +1,6 @@
 .toggle-theme {
-  background: #fff;
-  border: rgb(14, 13, 13);
+  background: var(--font-color);
+  border: var(--background-color);
   border-radius: 30px;
   cursor: pointer;
   display: flex;

@@ -10,6 +10,8 @@
       margin: 0 auto; //centralizado
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
 
       > img {
@@ -31,6 +33,7 @@
   main {
     max-width: 800px;
     margin: 0 auto;
+    padding: 1rem;
 
     .room-title {
       margin: 32px 0 24px;

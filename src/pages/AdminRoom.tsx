@@ -1,7 +1,8 @@
 import deleteImg from "../assets/images/delete.svg";
 import checkImg from "../assets/images/check.svg";
 import answerImg from "../assets/images/answer.svg";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { RoomCode } from "../components/RoomCode";
 import { useParams, useHistory } from "react-router-dom";
 import "../styles/room.scss";
@@ -11,16 +12,18 @@ import { useRoom } from "../hooks/useRoom";
 import { Button } from "../components/Button";
 import { database } from "../services/firebase";
 import { Logo } from "../components/Logo";
+import Toggle from "../components/Toggle";
 
 type RoomParams = {
   id: string;
 };
 
+
 export function AdminRoom() {
   const params = useParams<RoomParams>();
   const RoomID = params.id;
   const { questions, title } = useRoom(RoomID);
-  const { currentTheme } = useTheme();
+  const { currentTheme, toggleTheme } = useTheme();
   const history = useHistory();
 
   async function handleEndRoom() {
@@ -52,11 +55,14 @@ export function AdminRoom() {
     <div id="pageRoom" className={currentTheme}>
       <header>
         <div className="content">
-          <Logo/>
+        <div className='teste'>
+            <Logo />
+            <Toggle currentTheme={currentTheme} toggleTheme={toggleTheme} />
+          </div>
           <div>
             <RoomCode code={RoomID} />
-            <Button isOutlined type="button" onClick={handleEndRoom}>
-              Encerrar sala
+            <Button title='Encerrar sala' isOutlined type="button" onClick={handleEndRoom}>
+            <FontAwesomeIcon icon={faSignOutAlt} />
             </Button>
           </div>
         </div>
