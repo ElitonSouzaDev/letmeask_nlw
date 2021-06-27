@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://imgur.com/l3dVtfr" alt="letmeask" width="300"/>
+   <img src="/src/assets/images.logo.svg" alt="letmeask" width="300"/>
 </p>
 
 <p align="center">
