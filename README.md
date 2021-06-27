@@ -18,7 +18,7 @@
   <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#como-rodar">Como rodar?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#licença-e-autora">Licença e Autora</a>
+  <a href="#autor">Autor</a>
 </p>
 
 ## Sobre
@@ -62,11 +62,8 @@ $ yarn start
 Acesse em seu navegador http://localhost:3000/ para ver o resultado.
 
 
-## Licença e Autora
+## Autor
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/lorenatoscano/letmeask/blob/main/LICENSE) para mais detalhes.
+Feito por [Eliton de Souza](https://github.com/ElitonSouzaDev).
 
-Feito com :purple_heart: por [Lorena Toscano](https://github.com/lorenatoscano).
-
-
-[![Linkedin Badge](https://img.shields.io/badge/-Lorena_Toscano-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/eliton-souza-a42a4892/)](https://www.linkedin.com/in/eliton-souza-a42a4892/)
+Linkedin: [Eliton de Souza](https://www.linkedin.com/in/eliton-souza-a42a4892/).
